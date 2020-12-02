@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
+  counterUpdate,
   decrement,
   increment,
   incrementByAmount,
@@ -27,6 +28,11 @@ const Counter = () => {
         <br />
         <button onClick={() => dispatch(incrementByAmount(Number(amount)))}>
           Increment By Amount
+        </button>
+      </div>
+      <div>
+        <button onClick={() => dispatch(counterUpdate())}>
+          Increment By Server
         </button>
       </div>
     </div>
